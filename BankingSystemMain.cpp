@@ -1,8 +1,8 @@
 /*
-Banking System Vers 0.7
+Banking System Vers 0.8
 File name: BankingSystemMain.cpp
 Author: Kim Minseo
-Last edited: 08/06/2023
+Last edited: 20/06/2023
 */
 
 #include "BankingCommonDecl.h"

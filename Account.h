@@ -1,8 +1,8 @@
 /*
 File name: Account.h
 Author: Kim Minseo
-Last edited: 08/06/2023
-Version 0.7
+Last edited: 20/06/2023
+Version 0.8
 */
 
 #ifndef __ACCOUNT_H__
@@ -15,12 +15,12 @@ class Account
 {
 private:
   int id;
-  std::string *name;
+  std::string name;
   double balance;
 
 public:
   Account(int id, double startingAmt, std::string inputName);
-  Account(const Account &ref);
+  Account &operator=(const Account &ref);
 
   int GetID() const;
   std::string GetName() const;
@@ -31,8 +31,6 @@ public:
   void ShowAccInfo() const;
   virtual void Deposit(double money);
   void Withdraw(double money);
-
-  ~Account();
 };
 
 #endif

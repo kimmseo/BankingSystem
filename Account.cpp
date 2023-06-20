@@ -1,8 +1,8 @@
 /*
 File name: Account.cpp
 Author: Kim Minseo
-Last edited: 08/06/2023
-Version 0.7
+Last edited: 20/06/2023
+Version 0.8
 */
 
 #include "BankingCommonDecl.h"
@@ -12,22 +12,16 @@ Version 0.7
 Account::Account(int id, double startingAmt, std::string inputName)
     : id(id), balance(startingAmt)
 {
-  std::string *name = new std::string(inputName);
-  this->name = name;
+  name = inputName;
 }
 
-// Account Copy Constructor
-Account::Account(const Account &ref)
-    : id(ref.id), balance(ref.balance)
+// Account operator overloading
+Account &Account::operator=(const Account &ref)
 {
-  std::string *name = new std::string(*ref.name);
-  this->name = name;
-}
-
-// Account Destructor
-Account::~Account()
-{
-  delete name;
+  id = ref.id;
+  balance = ref.balance;
+  name = ref.name;
+  return *this;
 }
 
 // Account Get methods
@@ -38,7 +32,7 @@ int Account::GetID() const
 
 std::string Account::GetName() const
 {
-  return *name;
+  return name;
 }
 
 double Account::GetBalance() const
@@ -54,8 +48,7 @@ void Account::SetID(int id)
 
 void Account::SetName(std::string inputName)
 {
-  std::string *name = new std::string(inputName);
-  this->name = name;
+  name = inputName;
 }
 
 void Account::SetBalance(double balance)
@@ -68,7 +61,7 @@ void Account::SetBalance(double balance)
 void Account::ShowAccInfo() const
 {
   std::cout << "Account ID: " << id << std::endl;
-  std::cout << "Name: " << *name << std::endl;
+  std::cout << "Name: " << name << std::endl;
   std::cout << "Balance: " << balance << std::endl
             << std::endl;
 }

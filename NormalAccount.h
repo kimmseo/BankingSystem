@@ -1,8 +1,8 @@
 /*
 File name: NormalAccount.h
 Author: Kim Minseo
-Last edited: 08/06/2023
-Version 0.7
+Last edited: 20/06/2023
+Version 0.8
 */
 
 #ifndef __NORMAL_ACCOUNT_H__
