@@ -2,7 +2,7 @@
 File name: HighCreditAccount.h
 Author: Kim Minseo
 Last edited: 20/06/2023
-Version 0.8
+Version 0.9
 */
 
 #ifndef __HIGHCREDIT_ACCOUNT_H__

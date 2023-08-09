@@ -2,7 +2,7 @@
 File name: BankingCommonDecl.h
 Author: Kim Minseo
 Last edited: 20/06/2023
-Version 0.8
+Version 0.9
 */
 
 #ifndef __BANKING_COMMON_H__
